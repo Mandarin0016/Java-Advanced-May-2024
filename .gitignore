@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+.idea
+.gitignore
+Java Advanced - May 2024.iml
