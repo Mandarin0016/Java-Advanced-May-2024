@@ -8,9 +8,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int length = Integer.parseInt(scanner.nextLine());
-        int width = Integer.parseInt(scanner.nextLine());
-        int height = Integer.parseInt(scanner.nextLine());
+        double length = Double.parseDouble(scanner.nextLine());
+        double width = Double.parseDouble(scanner.nextLine());
+        double height = Double.parseDouble(scanner.nextLine());
 
         Box box = new Box(length, width, height);
 
