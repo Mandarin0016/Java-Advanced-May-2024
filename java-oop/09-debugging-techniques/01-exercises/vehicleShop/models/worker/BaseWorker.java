@@ -51,7 +51,7 @@ public abstract class BaseWorker implements Worker {
 
     @Override
     public Collection<Tool> getTools() {
-        return List.of();
+        return this.tools;
     }
 
     public void setName(String name) {
