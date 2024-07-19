@@ -5,7 +5,7 @@ public class Main_7 {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException, ClassNotFoundException {
 
         // Достъп до класа
-        Class personClass = Person.class;
+        Class personClass = Human.class;
 
         // Достъп до полетата
         // Declared = всичко
@@ -13,10 +13,10 @@ public class Main_7 {
         Field[] publicFields = personClass.getFields();
 
         // Достъп до конструктор
-        Constructor<Person> constructor = personClass.getConstructor(String.class, int.class);
+        Constructor<Human> constructor = personClass.getConstructor(String.class, int.class);
 
         // Създаваме обект чрез конструктора
-        Person person = constructor.newInstance("Ivan", 20);
+        Human human = constructor.newInstance("Ivan", 20);
 
         // Достъп до методите
         Method[] allMethods = personClass.getDeclaredMethods();
@@ -24,11 +24,11 @@ public class Main_7 {
 
         Method getNameMethod = personClass.getDeclaredMethod("getName");
         getNameMethod.setAccessible(true);
-        System.out.println(getNameMethod.invoke(person));
+        System.out.println(getNameMethod.invoke(human));
 
         Field ageField = personClass.getDeclaredField("age");
         ageField.setAccessible(true);
-        System.out.println(ageField.get(person));
+        System.out.println(ageField.get(human));
 
         Field nameField = personClass.getDeclaredField("name");
 
